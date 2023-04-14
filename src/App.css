@@ -1,0 +1,36 @@
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+}
+
+.alingCategoryBox {
+  padding: 10px;
+  gap: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5rem;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+.descriptionBox {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 2rem;
+  padding: 1rem;
+}
+.pagination {
+  display: flex;
+}
+.active {
+  padding: 10px;
+}
+.alingpag {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  border: 2px solid black;
+  margin: 20px;
+  align-items: center;
+}
