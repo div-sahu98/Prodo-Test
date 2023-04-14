@@ -5,20 +5,38 @@
 }
 
 .alingCategoryBox {
+  background: wheat;
   padding: 10px;
   gap: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   margin: 5rem;
-  border: 2px solid black;
+  border: 6px solid black;
   border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.productBox {
+  padding: 10px;
+  gap: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 5rem;
+  border: 6px solid black;
+  background: beige;
+  border-radius: 5px;
+}
+.alingCategoryBox:hover {
+  transform: scale(1.01);
 }
 .descriptionBox {
   border: 2px solid black;
   border-radius: 5px;
   margin: 2rem;
   padding: 1rem;
+  background: antiquewhite;
 }
 .pagination {
   display: flex;

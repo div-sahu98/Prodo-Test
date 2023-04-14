@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router";
 import { getProductDetails } from "../../api/apiAction";
 import Pagination from "../Paginatation";
+import PrdocutBox from "../ProductBox";
+import { handleFieldEmpty } from "../../utils/utils";
 
 const Index = () => {
   //use of useLocation to fetch the ID of categories
@@ -34,23 +36,13 @@ const Index = () => {
     <>
       {overViewData.items.map((item) => {
         return (
-          <>
-            <div className="descriptionBox" key={item.id}>
-              {" "}
-              <div className="alingCategoryBox">
-                <div>{item.id || ""}</div>
-                <div>NAME: {item?.productName}</div>
-                <div>RS: {item.variants[0]?.price}</div>
-                <img
-                  src={item.productImages}
-                  alt="Item Image"
-                  width="100"
-                  height="100"
-                ></img>
-              </div>
-              <div>{item.inventoryDetails.description}</div>
-            </div>
-          </>
+          <PrdocutBox
+            id={handleFieldEmpty(item.id)}
+            productName={handleFieldEmpty(item?.productName)}
+            productImages={handleFieldEmpty(item.productImages)}
+            price={handleFieldEmpty(item.variants[0]?.price)}
+            description={handleFieldEmpty(item.inventoryDetails.description)}
+          />
         );
       })}
       <Pagination

@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { getCategoriesData } from "../../api/apiAction";
 import CategoryBox from "../CategoryBox";
+import { handleFieldEmpty } from "../../utils/utils";
 
 const Index = () => {
   //creating a state to store API call DATA
@@ -25,9 +26,9 @@ const Index = () => {
       {overViewData.map((element) => {
         return (
           <CategoryBox
-            id={element.id}
-            nameItem={element.categoryName}
-            image={element.categoryImages}
+            id={handleFieldEmpty(element.id)}
+            nameItem={handleFieldEmpty(element.categoryName)}
+            image={handleFieldEmpty(element.categoryImages)}
           />
         );
       })}
